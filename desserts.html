@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desserts | NINE TWO NINE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Raleway', Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #4a7f7e;
+      text-align: center;
+    }
+    h1 {
+      color: #ffffff;
+      font-weight: 300;
+      letter-spacing: 6px;
+    }
+    a {
+      color: #ffffff;
+    }
+    .menu {
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 10px 24px;
+      text-align: left;
+    }
+    .menu h2 {
+      display: inline-block;
+      color: #ffffff;
+      font-weight: 300;
+      letter-spacing: 4px;
+      margin: 28px 0 6px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #ffffff;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 14px 12px;
+      color: #eef6f6;
+      letter-spacing: 2px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      transition: transform 0.25s ease, background 0.25s, box-shadow 0.25s;
+    }
+    .item span:first-child {
+      flex: 0 1 250px;
+    }
+    .item small {
+      display: block;
+      margin-top: 4px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      opacity: 0.8;
+    }
+    .price {
+      background: #ffffff;
+      color: #3d6564;
+      padding: 2px 12px;
+      border-radius: 14px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .item:hover .price {
+      opacity: 1;
+    }
+    @media (hover: none) {
+      .price {
+        opacity: 1;
+      }
+    }
+    @media (hover: hover) {
+      .item:hover {
+        transform: scale(1.08);
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 14px;
+        border-bottom-color: transparent;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        position: relative;
+        z-index: 1;
+      }
+    }
+        .item {
+      transition: transform 0.25s ease, background 0.25s, box-shadow 0.25s;
+    }
+    @media (hover: none) {
+      .item.active {
+        transform: scale(1.06);
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 14px;
+        border-bottom-color: transparent;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+      }
+    }
+        @keyframes itemDrop {
+      0% {
+        opacity: 0;
+        transform: translateX(-40px) rotate(-4deg);
+      }
+      60% {
+        opacity: 1;
+        transform: translateX(6px) rotate(1deg);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0);
+      }
+    }
+    .item {
+      transform-origin: left center;
+      animation: itemDrop 0.5s ease-out backwards;
+    }
+      a.back {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 38px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      font-size: 20px;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.25s;
+    }
+    a.back:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateX(-3px);
+    }
+  </style>
+</head>
+<body>
+  <p><a class="back" href="index.html" aria-label="Back">&larr;</a></p>
+  <h1>DESSERTS</h1>
+
+  <div class="menu">
+    <h2>Desserts</h2>
+    <div class="item"><span>Strawberry Chocolate Cup</span><span class="price">185</span></div>
+    <div class="item"><span>Strawberry Pistachio Cup</span><span class="price">195</span></div>
+    <div class="item"><span>Tiramisu</span><span class="price">165</span></div>
+    <div class="item"><span>Muffin<small>Vanilla &amp; Choco</small></span><span class="price">100</span></div>
+    <div class="item"><span>San Sebastian<small>Plain &amp; Nutella &amp; Pistachio</small></span><span class="price">210</span></div>
+    <div class="item"><span>Cheesecake Plain<small>Lotus 30 &amp; Nutella 20 &amp; Pistachio 40 &amp; Caramel 10 &amp; Blueberry 15</small></span><span class="price">155</span></div>
+    <div class="item"><span>Chocolate Cake</span><span class="price">165</span></div> 
+    <div class="item"><span>Matilda</span><span class="price">165</span></div>
+        <div class="item"><span>Walnut Tartlet</span><span class="price">175</span></div>
+    <div class="item"><span>Dubai Cake Can</span><span class="price">225</span></div>
+    <div class="item"><span>Profiterole<small>Chocolate &amp; White &amp; Lotus</small></span><span class="price">185</span></div>
+    <div class="item"><span>Cheese Brownies Can</span><span class="price">215</span></div>
+    <div class="item"><span>Cheese Brownies Cup</span><span class="price">185</span></div>
+    <div class="item"><span>Walnut White Paradise</span><span class="price">155</span></div>
+   
+  </div>
+    <script>
+    const items = document.querySelectorAll(".item");
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        entry.target.classList.toggle("active", entry.isIntersecting);
+      });
+    }, { rootMargin: "-45% 0px -45% 0px" });
+    items.forEach(function (item) {
+      observer.observe(item);
+    });
+  </script>
+</body>
+</html>

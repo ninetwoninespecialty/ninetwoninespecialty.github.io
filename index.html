@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NINE TWO NINE SPECIALTY COFFEE</title>
+    <link rel="icon" type="image/png" href="logs.png">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+    <style>
+    body {
+        
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #dff0f8;
+      text-align: center;
+    }
+          h1 {
+      color: #b08968;
+      font-family: 'Raleway', Arial, sans-serif;
+      font-weight: 300;
+      letter-spacing: 6px;
+    }
+          .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .card {
+      width: 260px;
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      text-decoration: none;
+      color: #4b3b2f;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .card-img {
+      height: 160px;
+      background: #bfe3f5;
+    }
+    .card h2 {
+      color: #b08968;
+      margin: 16px 12px 8px;
+      font-size: 20px;
+    }
+    .card p {
+      margin: 0 12px 20px;
+      font-size: 14px;
+    }
+          .card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+          .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+          .card {
+      overflow: visible;
+    }
+    .card-img {
+      border-radius: 16px 16px 0 0;
+    }
+    .card-img img {
+      transition: transform 0.4s;
+    }
+    .card:hover .card-img img {
+      transform: translateY(-18px) scale(1.15);
+    }
+          .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 80px;
+    }
+          @media (max-width: 600px) {
+      .logo {
+        position: static;
+        display: block;
+        margin: 0 auto 10px;
+        width: 70px;
+      }
+    }
+          h1 span {
+      display: block;
+      font-size: 0.5em;
+      letter-spacing: 3px;
+      font-variant: small-caps;
+    }
+          .menu {
+      max-width: 500px;
+      margin: 30px auto;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 10px 24px;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .item {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid #dff0f8;
+      color: #4b3b2f;
+    }
+    .item:last-child {
+      border-bottom: none;
+    }
+    .price {
+      color: #b08968;
+      font-weight: bold;
+    }
+          .branches {
+      margin: 50px 0 20px;
+    }
+    .branches h2 {
+      color: #b08968;
+      font-family: 'Raleway', Arial, sans-serif;
+      font-weight: 300;
+      letter-spacing: 6px;
+    }
+    .branch-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 28px;
+      background: #b08968;
+      color: #ffffff;
+      border-radius: 30px;
+      text-decoration: none;
+      letter-spacing: 2px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .branch-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+          @keyframes domino {
+      0% {
+        opacity: 0;
+        transform: translateX(-60px) rotate(-12deg);
+      }
+      60% {
+        opacity: 1;
+        transform: translateX(8px) rotate(3deg);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0);
+      }
+    }
+    .card {
+      animation: domino 0.6s ease-out backwards;
+    }
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.22s; }
+    .card:nth-child(3) { animation-delay: 0.34s; }
+    .card:nth-child(4) { animation-delay: 0.46s; }
+    .card:nth-child(5) { animation-delay: 0.58s; }
+    .card:nth-child(6) { animation-delay: 0.7s; }
+    .card:nth-child(7) { animation-delay: 0.82s; }
+    .card:nth-child(8) { animation-delay: 0.94s; }
+          @keyframes float {
+      0%, 100% {
+        translate: 0 0;
+      }
+      50% {
+        translate: 0 -6px;
+      }
+    }
+    .card-img img {
+      animation: float 4s ease-in-out infinite;
+    }
+    .card:nth-child(2n) .card-img img {
+      animation-delay: -1.3s;
+    }
+    .card:nth-child(3n) .card-img img {
+      animation-delay: -2.6s;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .card,
+      .card-img img {
+        animation: none;
+      }
+    }
+          .tagline {
+      margin: 40px 0 30px;
+      font-family: 'Raleway', Arial, sans-serif;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #b08968;
+    }
+      a.back {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 38px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      font-size: 20px;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.25s;
+    }
+    a.back:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateX(-3px);
+    }
+  </style>
+<body>
+  <img class="logo" src="logs.png" alt="Nine Two Nine logo">
+    <h1>NINE TWO NINE <span>Specialty Coffee</span></h1>
+  <p>Redefining specialty coffee experience.</p>
+    <div class="branches">
+    <h2>OUR BRANCHES</h2>
+    <a class="branch-btn" href="https://linktr.ee/ninetwoninecoffee?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafG1BdqvD1J3SyTo_1fYsrTcseIObPBnXzQQXuR_GKLSE5sHmEHX1Xi2uf-zQ_aem_JhxexWujphHl6RNaAd-nwQ" target="_blank" rel="noopener">View all locations</a>
+  </div>
+    <p class="tagline">Your next favorite cup is one tap away.</p>
+</body>
+    <div class="cards">
+        <a class="card" href="coffee.html">
+           <div class="card-img">
+        <img src="Classics.png" alt="Ice and Hot Coffee">
+      </div>
+      <h2>ICE &amp; HOT COFFEE</h2>
+         
+      <p>Everything made with coffee, hot or cold.</p>
+    </a>
+                 <a class="card" href="noncoffee.html">
+      <div class="card-img">
+        <img src="non-coffee.png" alt="Non-Coffee">
+      </div>
+      <h2>NON-COFFEE</h2>
+      <p>Smoothies, shakes, matcha and mojito.</p>
+    </a>
+            <a class="card" href="brewing.html">
+      <div class="card-img">
+        <img src="brewing.png" alt="Brewing Coffee">
+      </div>
+      <h2>BREWING COFFEE</h2>
+      <p>Specialty coffee brewed your way.</p>
+    </a>
+        <a class="card" href="desserts.html">
+      <div class="card-img">
+        <img src="IMG_4605.png" alt="Desserts">
+      </div>
+      <h2>DESSERTS</h2>
+      <p>Sweet treats to go with your coffee.</p>
+    </a>
+    </a>
+        
+            <a class="card" href="breakfast.html">
+      <div class="card-img">
+        <img src="breakfast.png" alt="Breakfast">
+      </div>
+      <h2>BREAKFAST</h2>
+      <p>Fresh plates to start your day.</p>
+    </a>
+        <a class="card" href="sandwiches.html">
+      <div class="card-img">
+        <img src="hotdog.png" alt="Sandwiches and Salads">
+      </div>
+      <h2>SANDWICHES &amp; SALADS</h2>
+      <p>Fresh sandwiches and salads.</p>
+    </a>
+        <a class="card" href="juice.html">
+      <div class="card-img">
+        <img src="juice.png" alt="Fresh Juice">
+      </div>
+      <h2>FRESH JUICE</h2>
+      <p>Fresh fruit juices.</p>
+    </a>
+        <a class="card" href="extras.html">
+      <div class="card-img">
+        <img src="EX.png" alt="Extras">
+      </div>
+      <h2>EXTRAS</h2>
+      <p>Add-ons for your order.</p>
+    </a>
+  </div>
+</html>
